@@ -1,0 +1,17 @@
+quarkus:
+  datasource:
+    db-kind: postgresql
+  hibernate-orm:
+    database:
+  flyway:
+    migrate-at-start: true
+    baseline-on-migrate: true
+    validate-on-migrate: true
+    validate-migration-naming: true
+    locations: "db/migration"
+
+"%dev":
+  quarkus:
+    datasource:
+      devservices:
+        reuse: true
