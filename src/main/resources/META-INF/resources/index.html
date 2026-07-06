@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card">
+        <h1>Fortune Web</h1>
+        <p id="fortune">Click below to reveal your fortune.</p>
+        <span id="author" class="author"></span>
+        <button onclick="loadFortune()">Reveal fortune</button>
+        <label class="toggle">
+            <input type="checkbox" id="autoRefresh" onchange="toggleAutoRefresh()">
+            Auto-refresh every 5s
+        </label>
+
+        <div class="add">
+            <h2>Add your own</h2>
+            <textarea id="newMessage" rows="3" placeholder="Your fortune..."></textarea>
+            <input id="newAuthor" type="text" placeholder="Author (optional)">
+            <button onclick="addFortune()">Add fortune</button>
+            <p id="addMsg"></p>
+        </div>
+    </div>
+    <script src="app.js" defer></script>
+</body>
+</html>
