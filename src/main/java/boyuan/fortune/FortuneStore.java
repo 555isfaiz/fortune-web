@@ -28,7 +28,7 @@ public class FortuneStore {
         if (total <= 0) {
             return Optional.empty();
         }
-        int offset = random.nextInt((int) total + 1);
+        int offset = random.nextInt((int) total);
         return FortuneEntity.findAll(Sort.by("id")).page(offset, 1).firstResultOptional()
                 .map(e -> new Fortune(((FortuneEntity) e).message, Optional.ofNullable(((FortuneEntity) e).author)));
     }
